@@ -1,0 +1,11 @@
+@startuml diagrama
+class Terminal {
+    +main(args: String[]): void
+}
+
+class CommandHandler {
+    +executeCommand(cmd: String): void
+}
+
+Terminal --> CommandHandler
+@enduml
