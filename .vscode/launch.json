@@ -1,0 +1,15 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compilar Java",
+            "command": "javac -d bin src/**/*.java",
+            "type": "shell"
+        },
+        {
+            "label": "Executar Terminal",
+            "command": "java -cp bin Terminal",
+            "type": "shell"
+        }
+    ]
+}
