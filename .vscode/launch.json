@@ -18,6 +18,13 @@
             "name": "Terminal",
             "request": "launch",
             "mainClass": "Terminal",
+            "projectName": "projeto-terminal-java_a4c4bf1"
+        },
+        {
+            "type": "java",
+            "name": "Terminal",
+            "request": "launch",
+            "mainClass": "Terminal",
             "projectName": "projeto-terminal-java"
         }
     ]
