@@ -11,5 +11,14 @@
             "command": "java -cp bin Terminal",
             "type": "shell"
         }
+    ],
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Terminal",
+            "request": "launch",
+            "mainClass": "Terminal",
+            "projectName": "projeto-terminal-java"
+        }
     ]
 }
