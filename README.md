@@ -22,13 +22,35 @@
 ```plantuml
 @startuml
 class Terminal {
-    +main(args: String[]): void
+    +main(String[] args)
 }
 
 class CommandHandler {
-    +executeCommand(cmd: String): void
+    +executeCommand(String input)
 }
 
-Terminal --> CommandHandler
+class FileManager {
+    +createFile(String nome)
+    +deleteFile(String nome)
+    +readFile(String nome)
+    +writeFile(String nome, String conteudo)
+}
+
+class DirectoryManager {
+    +changeDirectory(String caminho)
+    +createDirectory(String nome)
+    +deleteDirectory(String nome)
+    +listContents()
+}
+
+class HistoryManager {
+    +saveCommand(String comando)
+    +getHistory()
+}
+
+Terminal --> CommandHandler : "Usa"
+CommandHandler --> FileManager : "Manipula Arquivos"
+CommandHandler --> DirectoryManager : "Manipula Diretórios"
+CommandHandler --> HistoryManager : "Gerencia Histórico"
 
 @enduml
