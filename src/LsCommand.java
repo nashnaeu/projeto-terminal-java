@@ -8,4 +8,4 @@ public class LsCommand implements Command{
             System.out.println(file);
         }
     }
-}
+}  

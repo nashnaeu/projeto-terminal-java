@@ -11,11 +11,9 @@ public class Terminal{
             System.out.print(System.getProperty("user.dir"));
             System.out.print(">");
             String ent = leia.nextLine();
-
             if(ent.isEmpty()){
                 continue;
             }
-
             if(ent.equals("exit")){
                 break;
             }
