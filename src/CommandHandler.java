@@ -5,6 +5,7 @@ public class CommandHandler {
     private final Map<String,  Command> commands = new HashMap<>();
 
     public CommandHandler(){
+<<<<<<< HEAD
         FileManager fileManager = new FileManager();
         DirectoryManager dirManager = new DirectoryManager();
 
@@ -16,6 +17,15 @@ public class CommandHandler {
         commands.put("rm", new RmCommand());
         commands.put("cat",  new CatCommand());
         commands.put("echo", new EchoCommand());
+=======
+        //FileManager fileManager = new FileManager();
+        //DirectoryManager dirManager = new DirectoryManager();
+
+        commands.put("pwd", new PwdCommand());
+        commands.put("ls", new LsCommand());
+        //commands.put("touch", new TouchCommand(fileManager));
+        //commands.put("cd", CdCommand(dirManager));
+>>>>>>> natan-branch
     }
 
     public void executeCommand(String ent){
