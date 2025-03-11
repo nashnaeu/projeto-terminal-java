@@ -22,7 +22,6 @@
 ```plantuml
 @startuml
 class Terminal {
-<<<<<<< HEAD
     +main(String[] args)
 }
 
@@ -53,15 +52,5 @@ Terminal --> CommandHandler : "Usa"
 CommandHandler --> FileManager : "Manipula Arquivos"
 CommandHandler --> DirectoryManager : "Manipula Diretórios"
 CommandHandler --> HistoryManager : "Gerencia Histórico"
-=======
-    +main(args: String[]): void
-}
-
-class CommandHandler {
-    +executeCommand(cmd: String): void
-}
-
-Terminal --> CommandHandler
->>>>>>> natan-branch
 
 @enduml

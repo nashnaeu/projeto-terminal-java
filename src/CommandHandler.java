@@ -5,7 +5,6 @@ public class CommandHandler {
     private final Map<String,  Command> commands = new HashMap<>();
 
     public CommandHandler(){
-<<<<<<< HEAD
         FileManager fileManager = new FileManager();
         DirectoryManager dirManager = new DirectoryManager();
 
@@ -17,15 +16,7 @@ public class CommandHandler {
         commands.put("rm", new RmCommand());
         commands.put("cat",  new CatCommand());
         commands.put("echo", new EchoCommand());
-=======
-        //FileManager fileManager = new FileManager();
-        //DirectoryManager dirManager = new DirectoryManager();
-
-        commands.put("pwd", new PwdCommand());
-        commands.put("ls", new LsCommand());
-        //commands.put("touch", new TouchCommand(fileManager));
-        //commands.put("cd", CdCommand(dirManager));
->>>>>>> natan-branch
+        commands.put("history", new HistoryCommand());
     }
 
     public void executeCommand(String ent){
@@ -36,6 +27,7 @@ public class CommandHandler {
 
         if(cmd != null){
             cmd.execute(in);
+            HistoryManager.saveCommand(ent);
         }else{
             System.out.println("'" + in[0] + "' não é reconhecido como um comando interno\r\n" + //
                                 "ou externo, um programa operável ou um arquivo em lotes.");

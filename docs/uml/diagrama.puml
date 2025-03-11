@@ -4,7 +4,7 @@ class Terminal {
 }
 
 class CommandHandler {
-    +executeCommand(String input)
+    +executeCommand(String entrada)
 }
 
 class FileManager {
